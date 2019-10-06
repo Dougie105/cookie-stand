@@ -4,12 +4,16 @@ var seattle = {
     maxCust: 65,
     avgCookie: 6.3,
 
-    function getRandom(seattle.minCust , seattle.maxCust) {
-        return Math.random() * (seattle.maxCust - seattle.minCust) + seattle.minCust;
-    }
+    whatsThat: function(){
+        seattle.minCust = Math.ceil(seattle.minCust);
+        seattle.maxCust = Math.floor(seattle.maxCust);
+        return Math.floor(Math.random() * (seattle.maxCust - seattle.minCust)) + seattle.minCust;
+    } 
 
 }
-console.log(seattle);
+console.log(seattle.whatsThat());
+
+
 
 var tokyo = {
     location: 'Tokyo',
@@ -17,12 +21,16 @@ var tokyo = {
     maxCust: 24,
     avgCookie: 1.2,
 
-    function getRandom(seattle.minCust , seattle.maxCust) {
-        return Math.random() * (seattle.maxCust - seattle.minCust) + seattle.minCust;
-    }
+    whatsThat: function(){
+        tokyo.minCust = Math.ceil(tokyo.minCust);
+        tokyo.maxCust = Math.floor(tokyo.maxCust);
+        return Math.floor(Math.random() * (tokyo.maxCust - tokyo.minCust)) + tokyo.minCust;
+    } 
 
 }
-console.log(seattle);
+console.log(tokyo.whatsThat());
+
+
 
 var dubai = {
     location: 'Dubai',
@@ -30,12 +38,16 @@ var dubai = {
     maxCust: 38,
     avgCookie: 3.7,
 
-    function getRandom(seattle.minCust , seattle.maxCust) {
-        return Math.random() * (seattle.maxCust - seattle.minCust) + seattle.minCust;
-    }
+    whatsThat: function(){
+        dubai.minCust = Math.ceil(dubai.minCust);
+        dubai.maxCust = Math.floor(dubai.maxCust);
+        return Math.floor(Math.random() * (dubai.maxCust - dubai.minCust)) + dubai.minCust;
+    } 
 
 }
-console.log(seattle);
+console.log(dubai.whatsThat());
+
+
 
 var paris = {
     location: 'Paris',
@@ -43,12 +55,16 @@ var paris = {
     maxCust: 38,
     avgCookie: 2.3,
 
-    function getRandom(seattle.minCust , seattle.maxCust) {
-        return Math.random() * (seattle.maxCust - seattle.minCust) + seattle.minCust;
-    }
+    whatsThat: function(){
+        paris.minCust = Math.ceil(paris.minCust);
+        paris.maxCust = Math.floor(paris.maxCust);
+        return Math.floor(Math.random() * (paris.maxCust - paris.minCust)) + paris.minCust;
+    } 
 
 }
-console.log(seattle);
+console.log(paris.whatsThat());
+
+
 
 var lima = {
     location: 'Lima',
@@ -56,8 +72,13 @@ var lima = {
     maxCust: 16,
     avgCookie: 4.6,
 
-    function getRandom(seattle.minCust , seattle.maxCust) {
-        return Math.random() * (seattle.maxCust - seattle.minCust) + seattle.minCust;
-    }
+    whatsThat: function(){
+        lima.minCust = Math.ceil(lima.minCust);
+        lima.maxCust = Math.floor(lima.maxCust);
+        return Math.floor(Math.random() * (lima.maxCust - lima.minCust)) + lima.minCust;
+    } 
 
-}console.log(seattle);
+}
+console.log(lima.whatsThat());
+
+
