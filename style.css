@@ -1,0 +1,19 @@
+main{
+    background-color: darksalmon 
+}
+
+p{
+    color: rgb(255, 68, 0);
+}
+
+data{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: darkslateblue;
+}
+
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    color: indigo;
+}
