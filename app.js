@@ -13,7 +13,7 @@ var seattle = {
   totalCookies: [],
 
   cookiesPerHour: function(){
-    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+    return Math.floor((Math.random() * (this.maxCust - this.minCust) + this.minCust) * this.avgCookie);
   },
 
   generateHourlyCookies: function(){
@@ -24,12 +24,18 @@ var seattle = {
   },
 
   render: function() {
+    var total = 0;
     for( var i = 0; i < this.hours.length; i++) {
       var childEl = document.createElement('li');
       childEl.textContent = `Hours: ${this.hours[i]} cookies: ${this.totalCookies[i]}`;
       seattleListEl.appendChild(childEl);
+      total = total + this.totalCookies[i];
     }
+    var totalEl = document.createElement('li');
+    totalEl.textContent = `Todays Total: ${total} cookies`;
+    seattleListEl.appendChild(totalEl);
   }
+
 };
 seattle.generateHourlyCookies();
 seattle.render();
@@ -47,7 +53,7 @@ var tokyo = {
   totalCookies: [],
 
   cookiesPerHour: function(){
-    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+    return Math.floor((Math.random() * (this.maxCust - this.minCust) + this.minCust) * this.avgCookie);
   },
 
   generateHourlyCookies: function(){
@@ -58,12 +64,18 @@ var tokyo = {
   },
 
   render: function(){
+    var total = 0;
     for( var i = 0; i<this.hours.length; i++){
       var childEl = document.createElement('li');
       childEl.textContent = `Hours: ${this.hours[i]} cookies: ${this.totalCookies[i]}`;
       tokyoListEl.appendChild(childEl);
+      total = total + this.totalCookies[i];
     }
+    var totalEl = document.createElement('li');
+    totalEl.textContent = `Todays Total: ${total} cookies`;
+    tokyoListEl.appendChild(totalEl);
   }
+
 };
 tokyo.generateHourlyCookies();
 tokyo.render();
@@ -81,7 +93,7 @@ var dubai = {
   totalCookies: [],
 
   cookiesPerHour: function(){
-    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+    return Math.floor((Math.random() * (this.maxCust - this.minCust) + this.minCust) * this.avgCookie);
   },
 
   generateHourlyCookies: function(){
@@ -92,12 +104,18 @@ var dubai = {
   },
 
   render: function(){
+    var total = 0;
     for( var i = 0; i<this.hours.length; i++){
       var childEl = document.createElement('li');
       childEl.textContent = `Hours: ${this.hours[i]} cookies: ${this.totalCookies[i]}`;
       dubaiListEl.appendChild(childEl);
+      total = total + this.totalCookies[i];
     }
+    var totalEl = document.createElement('li');
+    totalEl.textContent = `Todays Total: ${total} cookies`;
+    dubaiListEl.appendChild(totalEl);
   }
+
 };
 dubai.generateHourlyCookies();
 dubai.render();
@@ -115,7 +133,7 @@ var paris = {
   totalCookies: [],
 
   cookiesPerHour: function(){
-    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+    return Math.floor((Math.random() * (this.maxCust - this.minCust) + this.minCust) * this.avgCookie);
   },
 
   generateHourlyCookies: function(){
@@ -126,12 +144,18 @@ var paris = {
   },
 
   render: function(){
+    var total = 0;
     for( var i = 0; i<this.hours.length; i++){
       var childEl = document.createElement('li');
       childEl.textContent = `Hours: ${this.hours[i]} cookies: ${this.totalCookies[i]}`;
       parisListEl.appendChild(childEl);
+      total = total + this.totalCookies[i];
     }
+    var totalEl = document.createElement('li');
+    totalEl.textContent = `Todays Total: ${total} cookies`;
+    parisListEl.appendChild(totalEl);
   }
+
 };
 paris.generateHourlyCookies();
 paris.render();
@@ -149,7 +173,7 @@ var lima = {
   totalCookies: [],
 
   cookiesPerHour: function(){
-    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+    return Math.floor((Math.random() * (this.maxCust - this.minCust) + this.minCust) * this.avgCookie);
   },
 
   generateHourlyCookies: function(){
@@ -160,12 +184,18 @@ var lima = {
   },
 
   render: function(){
+    var total = 0;
     for( var i = 0; i<this.hours.length; i++){
       var childEl = document.createElement('li');
       childEl.textContent = `Hours: ${this.hours[i]} cookies: ${this.totalCookies[i]}`;
       limaListEl.appendChild(childEl);
+      total = total + this.totalCookies[i];
     }
+    var totalEl = document.createElement('li');
+    totalEl.textContent = `Todays Total: ${total} cookies`;
+    limaListEl.appendChild(totalEl);
   }
+
 };
 lima.generateHourlyCookies();
 lima.render();
