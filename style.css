@@ -1,5 +1,14 @@
+header>ul>li{
+    display: inline-block;
+    border: 5px, black, solid;
+}
+
+header{
+    background-color: darksalmon;
+}
+
 main{
-    background-color: darksalmon 
+    background-color: darksalmon;
 }
 
 p{
@@ -12,8 +21,13 @@ data{
     color: darkslateblue;
 }
 
-h2{
+caption{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: oblique;
     color: indigo;
+    font-size: 24px;
+}
+
+table{
+    border: 5px, solid, black, thick, transparent;
 }

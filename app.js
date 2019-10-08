@@ -1,84 +1,171 @@
+'use strict';
+
+/////////////////////////////////////////////////////////////////////////////////Seattle
+
+var seattleListEl = document.getElementById('seattleList');
+
 var seattle = {
+  hours:['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
   location: 'Seattle',
   minCust: 23,
   maxCust: 65,
   avgCookie: 6.3,
-  totalSales: 0,
+  totalCookies: [],
 
-  whatsThat: function(){
-    this.minCust = Math.ceil(this.minCust);
-    this.maxCust = Math.floor(this.maxCust);
-    return Math.floor(Math.random() * (this.maxCust - this.minCust)) + seattle.minCust;
+  cookiesPerHour: function(){
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+  },
+
+  generateHourlyCookies: function(){
+    for( var i = 0; i <this.hours.length; i++){
+      var cookies = this.cookiesPerHour();
+      this.totalCookies.push(cookies);
+    }
+  },
+
+  render: function() {
+    for( var i = 0; i < this.hours.length; i++) {
+      var childEl = document.createElement('li');
+      childEl.textContent = `Hours: ${this.hours[i]} cookies: ${this.totalCookies[i]}`;
+      seattleListEl.appendChild(childEl);
+    }
   }
-
 };
-console.log(seattle.whatsThat());
+seattle.generateHourlyCookies();
+seattle.render();
 
+////////////////////////////////////////////////////////////////////////////////// Tokyo
+
+var tokyoListEl = document.getElementById('tokyoList');
 
 var tokyo = {
+  hours:['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
   location: 'Tokyo',
   minCust: 3,
   maxCust: 24,
   avgCookie: 1.2,
+  totalCookies: [],
 
-  whatsThat: function(){
-    tokyo.minCust = Math.ceil(tokyo.minCust);
-    tokyo.maxCust = Math.floor(tokyo.maxCust);
-    return Math.floor(Math.random() * (tokyo.maxCust - tokyo.minCust)) + tokyo.minCust;
+  cookiesPerHour: function(){
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+  },
+
+  generateHourlyCookies: function(){
+    for( var i = 0; i<this.hours.length; i++){
+      var cookies = this.cookiesPerHour();
+      this.totalCookies.push(cookies);
+    }
+  },
+
+  render: function(){
+    for( var i = 0; i<this.hours.length; i++){
+      var childEl = document.createElement('li');
+      childEl.textContent = `Hours: ${this.hours[i]} cookies: ${this.totalCookies[i]}`;
+      tokyoListEl.appendChild(childEl);
+    }
   }
-
 };
-console.log(tokyo.whatsThat());
+tokyo.generateHourlyCookies();
+tokyo.render();
 
+////////////////////////////////////////////////////////////////////////////////// Dubai
 
+var dubaiListEl = document.getElementById('dubaiList');
 
 var dubai = {
+  hours:['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
   location: 'Dubai',
   minCust: 11,
   maxCust: 38,
   avgCookie: 3.7,
+  totalCookies: [],
 
-  whatsThat: function(){
-    dubai.minCust = Math.ceil(dubai.minCust);
-    dubai.maxCust = Math.floor(dubai.maxCust);
-    return Math.floor(Math.random() * (dubai.maxCust - dubai.minCust)) + dubai.minCust;
+  cookiesPerHour: function(){
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+  },
+
+  generateHourlyCookies: function(){
+    for( var i = 0; i<this.hours.length; i++){
+      var cookies = this.cookiesPerHour();
+      this.totalCookies.push(cookies);
+    }
+  },
+
+  render: function(){
+    for( var i = 0; i<this.hours.length; i++){
+      var childEl = document.createElement('li');
+      childEl.textContent = `Hours: ${this.hours[i]} cookies: ${this.totalCookies[i]}`;
+      dubaiListEl.appendChild(childEl);
+    }
   }
-
 };
-console.log(dubai.whatsThat());
+dubai.generateHourlyCookies();
+dubai.render();
 
+////////////////////////////////////////////////////////////////////////////////// Paris
 
+var parisListEl = document.getElementById('parisList');
 
 var paris = {
-  location: 'Paris',
+  hours:['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
+  location: 'Dubai',
   minCust: 20,
   maxCust: 38,
   avgCookie: 2.3,
+  totalCookies: [],
 
-  whatsThat: function(){
-    paris.minCust = Math.ceil(paris.minCust);
-    paris.maxCust = Math.floor(paris.maxCust);
-    return Math.floor(Math.random() * (paris.maxCust - paris.minCust)) + paris.minCust;
+  cookiesPerHour: function(){
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+  },
+
+  generateHourlyCookies: function(){
+    for( var i = 0; i<this.hours.length; i++){
+      var cookies = this.cookiesPerHour();
+      this.totalCookies.push(cookies);
+    }
+  },
+
+  render: function(){
+    for( var i = 0; i<this.hours.length; i++){
+      var childEl = document.createElement('li');
+      childEl.textContent = `Hours: ${this.hours[i]} cookies: ${this.totalCookies[i]}`;
+      parisListEl.appendChild(childEl);
+    }
   }
-
 };
-console.log(paris.whatsThat());
+paris.generateHourlyCookies();
+paris.render();
 
+////////////////////////////////////////////////////////////////////////////////// Lima
 
+var limaListEl = document.getElementById('limaList');
 
 var lima = {
+  hours:['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
   location: 'Lima',
-  minCust: 2,
-  maxCust: 16,
-  avgCookie: 4.6,
+  minCust: 20,
+  maxCust: 38,
+  avgCookie: 2.3,
+  totalCookies: [],
 
-  whatsThat: function(){
-    lima.minCust = Math.ceil(lima.minCust);
-    lima.maxCust = Math.floor(lima.maxCust);
-    return Math.floor(Math.random() * (lima.maxCust - lima.minCust)) + lima.minCust;
+  cookiesPerHour: function(){
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+  },
+
+  generateHourlyCookies: function(){
+    for( var i = 0; i<this.hours.length; i++){
+      var cookies = this.cookiesPerHour();
+      this.totalCookies.push(cookies);
+    }
+  },
+
+  render: function(){
+    for( var i = 0; i<this.hours.length; i++){
+      var childEl = document.createElement('li');
+      childEl.textContent = `Hours: ${this.hours[i]} cookies: ${this.totalCookies[i]}`;
+      limaListEl.appendChild(childEl);
+    }
   }
-
 };
-console.log(lima.whatsThat());
-
-
+lima.generateHourlyCookies();
+lima.render();
