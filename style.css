@@ -1,7 +1,8 @@
 header>ul>li{
     display: inline-block;
     border: 5px, black, solid;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family:
     font-style: oblique;
 }
 
