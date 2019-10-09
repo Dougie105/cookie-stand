@@ -3,6 +3,7 @@ header>ul>li{
     border: 5px, black, solid;
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     font-style: oblique;
+
 }
 
 body{
@@ -16,11 +17,11 @@ ul{
     display: inline-block;
 }
 
-table{
-    border: 5px black solid;
-}
-
-td{
-    border: 2px black dotted;
+table, td, th{
+    text-align: center;
+    border: 3px black solid;
+    border-collapse: collapse;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
