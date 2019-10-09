@@ -16,6 +16,11 @@ ul{
     display: inline-block;
 }
 
-.tableElem{
-    border: 5px, black, solid;
+table{
+    border: 5px black solid;
 }
+
+td{
+    border: 2px black dotted;
+}
+
