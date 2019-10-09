@@ -1,33 +1,26 @@
 header>ul>li{
     display: inline-block;
     border: 5px, black, solid;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-style: oblique;
 }
 
-header{
+body{
     background-color: darksalmon;
 }
 
-main{
-    background-color: darksalmon;
-}
-
-p{
-    color: rgb(255, 68, 0);
-}
-
-data{
+ul{
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
-    color: darkslateblue;
-}
-
-caption{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: oblique;
-    color: indigo;
-    font-size: 24px;
+    background-color: rgb(110, 104, 147);
+    display: inline-block;
 }
 
 table{
-    border: 5px, solid, black, thick, transparent;
+    border: 5px black solid;
 }
+
+td{
+    border: 2px black dotted;
+}
+
