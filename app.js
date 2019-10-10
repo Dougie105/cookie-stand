@@ -95,13 +95,13 @@ var renderHeaderRow = function(){
 
 renderHeaderRow();
 
-
 for( var i = 0; i < allLocations.length; i++ ) {
 
   allLocations[i].cookiesPerHour();
   allLocations[i].generateHourlyCookies();
   allLocations[i].render();
 }
+
 
 console.log(allLocations);
 ////////////////////////////////
@@ -144,33 +144,32 @@ console.log(totalPerHour);
 calcFooterRow();
 renderFooterRow();
 
-
-
-
-
-
 //FORM//
 
 var userForm = document.getElementById('user-form');
 userForm.addEventListener('submit', handleSubmit);
 
-function sayHello(){
-  console.log('testing if this works');
-}
-
 function handleSubmit(event){
   event.preventDefault();
-  sayHello();
-  console.log('event.target.inputElementName.value: ', event.target.inputElementName.value);
-  console.log('event.target.inputElementAge.value: ', event.target.inputElementAge.value);
-  var name = event.target.inputElementName.value;
-  var age = event.target.inputElementAge.value;
+
+  var location = event.target.location.value;
+  var avgCookie = event.target.avgCookie.value;
+  var minCust = event.target.minCust.value;
+  var maxCust = event.target.maxCust.value;
 
   //Validation
-  if(isNaN(age)){
+  if (isNaN(avgCookie)){
     alert('Please enter a number');
-    event.targer.inputElementAge.value = null;
+    event.target.avgCookie.value = null;
   }
-
-  alert('Your name is ${yourName} and your age is ${yourAge}');
+  if (isNaN(minCust)){
+    alert('Please enter a number');
+    event.target.minCustElem.value = null;
+  }
+  if (isNaN(maxCust)){
+    alert('Please enter a number');
+    event.target.maxCustElem.value = null;
+  }
+  var custInput = new Store(location, avgCookie, minCust, maxCust);
+  console.log(allLocations);
 }
