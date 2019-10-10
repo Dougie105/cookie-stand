@@ -22,17 +22,23 @@
     </header>
     <main>
         <table id="tableElem"></table>
+            <form method="POST" action="" id="user-form">
+                <fieldset>
+                    <label>Location:</label>
+                    <input id="location" type="text" placeholder="Location Name">
 
-        <form id="user-form">
-            <fieldset>
-                <label>Enter Name Here</label>
-                <input id="inputElementName" type="text" placeholder="Name Here...">
-                <label>Age Here:</label>
-                <input id="inputElementAge" type="text" placeholder="Age Here...">
-                <button value="submit">Submit</button>
-            </fieldset>
-        </form>
+                    <label>Minimum Customers:</label>
+                    <input id="minCust" type="text" placeholder="Minimum Customers">
 
+                    <label>Maximum Customers:</label>
+                    <input id="maxCust" type="text" placeholder="Maximum Customers">
+
+                    <label>Average Cookies:</label>
+                    <input id="avgCookie" type="text" placeholder="Average Cookies">
+
+                    <button value="submit">Submit</button>
+                </fieldset>
+            </form>
     </main>
     <footer>
 
