@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <link href="https://fonts.googleapis.com/css?family=Mansalva:regular" rel="stylesheet" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sales Data</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,33 +14,26 @@
             <li>Hours</li>
             <li>Locations</li>
             <li>Contact Us</li>
-            <li>Menu</li>
         </ul>
     </header>
     <main>
-        <table id="tableElem"></table>
-            <form method="POST" action="" id="user-form">
+            <form id="tableHead" >
                 <fieldset>
+                    <legend>Location Totals</legend>
                     <label>Location:</label>
                     <input id="location" type="text" placeholder="Location Name">
-
                     <label>Minimum Customers:</label>
                     <input id="minCust" type="text" placeholder="Minimum Customers">
-
                     <label>Maximum Customers:</label>
                     <input id="maxCust" type="text" placeholder="Maximum Customers">
-
                     <label>Average Cookies:</label>
                     <input id="avgCookie" type="text" placeholder="Average Cookies">
-
-                    <button value="submit">Submit</button>
+                    <button id="submit">Submit</button>
                 </fieldset>
             </form>
+<table id="cuttingBoard"></table>
     </main>
-    <footer>
-
-    </footer>
-    <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 
 </html>
