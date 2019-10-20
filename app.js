@@ -137,3 +137,4 @@ for (var i = 0; i < allLocations.length; i++) {
 }
 
 renderFooterRow();
+
